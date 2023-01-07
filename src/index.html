@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="../dist/output.css">
+    <script src="./script.js" defer></script>
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="p-6 font-sans bg-[#FFF1E0] bg-cover h-screen w-screen flex flex-col overflow-hidden font-courgette">   <!-- Content Wrapper Starts-->
+
+        <header>    <!-- Header Starts -->
+            <h1 class="font-bold text-5xl text-center text-black drop-shadow-xl shadow-black underline">TODO List</h1>
+        </header>    <!-- Header Ends -->
+
+        <div class="pt-10 grow">   <!-- Content Starts -->
+            
+            <main class="flex flex-col h-full">
+
+                <div class="p-2">
+                    <div class="flex flex-row w-full justify-end add-task">
+                        <button class="add-task-button bg-cyan-600 rounded-lg text-white p-2">Add Task</button>
+                    </div>
+
+                    <div class="w-full p-2 hidden flex items-center justify-between flex-wrap shadow-xl bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-600 add-form">
+                        <form class="grow">
+                            <label for="taskName" class="pr-4 mt-1">Task Name: <input type="text" id="taskName" name="taskName" class="border border-black rounded-lg p-1 mt-1"></label>
+                            <label for="status" class="pr-4 mt-1">Status: 
+                                <select name="status" id="status" class="border border-black rounded-lg p-1 mt-1">
+                                    <option value="Todo">Todo</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="InProgress">InProgress</option>
+                                </select>
+                                <!-- <input type="text" id="status" name="status" class="border border-black rounded-lg p-1"> -->
+                            </label>
+                        </form>
+                        <div class="mt-1">
+                            <button class="add-button bg-cyan-600 rounded-lg text-white p-2 mt-1">Add</button>
+                            <button class="close-button bg-red-600 rounded-lg text-white p-2 mt-1">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-2 max-h-[70%] grow shadow-2xl bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-600 overflow-y-scroll">
+                    <!-- <table class="border-collapse w-full text-center table-fixed">
+                        <colgroup>
+                            <col span="1" class="w-2/4">
+                            <col span="1" class="w-auto">
+                            <col span="1" class="w-1/12">
+                            <col span="1" class="w-1/12">
+                        </colgroup>
+                        <tr class="border-b-2 border-black mb-2">
+                            <th>Task Name</th>
+                            <th>Status</th>
+                            <th class="w-20">Edit</th>
+                            <th>Remove</th>
+                        </tr>
+                        <tbody class="task-list mt-2">
+                        </tbody>
+                    </table> -->
+                    <div class="w-full text-center py-1 min-w-min task-list">
+                        <!-- <div class="flex border-b-2 border-black font-base font-bold">
+                            <span class="w-7/12">Task Name</span>
+                            <span class="w-3/12">Status</span>
+                            <span class="w-1/12">Edit</span>
+                            <span class="w-1/12">Remove</span>
+                        </div> -->
+                    </div>
+                </div>
+
+            </main>
+
+        </div>  <!-- Content Ends -->
+
+    </div>   <!-- Content Wrapper Ends-->
+</body>
+</html>
